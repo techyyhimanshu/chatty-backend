@@ -16,9 +16,6 @@ app.use(cookieParser())
 app.use(express.json({
     limit: "50mb"
 }))
-app.use("/", (req, res) => {
-    return res.status(200).send("hello from chatty server")
-})
 app.use("/api", routes)
 const PORT = process.env.PORT
 server.listen(PORT, () => {
