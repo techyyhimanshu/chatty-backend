@@ -8,6 +8,9 @@ const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
         origin: "https://chatty-frontend-six.vercel.app",
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Content-Type"],
+        credentials: true,
     }
 })
 const userSocketMap = {}
