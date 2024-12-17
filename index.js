@@ -9,7 +9,7 @@ import cors from "cors";
 
 dotenv.config()
 app.use(cors({
-    origin: "https://chatty-frontend-six.vercel.app",
+    origin: ["https://chatty-frontend-six.vercel.app", "http://localhost:5173"],// Allow requests from these domains
     credentials: true,
 }))
 app.use(cookieParser())
