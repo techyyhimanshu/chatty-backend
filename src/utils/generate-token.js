@@ -6,6 +6,7 @@ const generateToken = (userId, res) => {
         maxAge: 1 * 24 * 60 * 60 * 1000, // ms
         httpOnly: true,
         sameSite: "None", // Allows cross-origin
+        secure: true
     })
     return token
 }
