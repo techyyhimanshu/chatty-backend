@@ -19,6 +19,7 @@ app.use(express.json({
 app.use("/api", routes)
 const PORT = process.env.PORT
 server.listen(PORT, () => {
+    console.log(process.env.NODE_ENV)
     console.log(`Server is running on port ${PORT}`)
     connectToDB()
 })

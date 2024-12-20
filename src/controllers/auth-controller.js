@@ -53,7 +53,8 @@ const login = async (req, res) => {
         return res.status(200).json({
             success: true, data: {
                 id: user._id,
-                email
+                email,
+                fullname: user.fullname
             }
         })
     } catch (error) {
@@ -91,7 +92,6 @@ const updateProfile = async (req, res) => {
 }
 const checkAuth = (req, res) => {
     try {
-        console.log("called")
         return res.status(200).json(req.user)
     } catch (error) {
         console.log(error)

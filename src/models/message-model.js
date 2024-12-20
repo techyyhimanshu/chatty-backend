@@ -17,6 +17,10 @@ const messageSchema = new mongoose.Schema({
     image: {
         type: "String"
     },
+    is_read: {
+        type: "Boolean",
+        default: false
+    },
     createdAt: {
         type: Date,
         default: Date.now
